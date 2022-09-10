@@ -1,38 +1,51 @@
 *{
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* :root{
+    background-color: #C98474;
+} */
 body{
     background-color: #23283b;
-    min-height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+main{
     background-color: #131313;
     /* background-color: #A7D2CB; */
-    max-width: 340px;
+    width: 270px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 35px;
-    border-radius: 10px;
+    /* padding-top: 10px; */
+    /* border-radius: 10px; */
     user-select: none; 
-    /* FIXME: */
+    box-shadow: 7px 3px 15px #000000;
 }
 #Display-area{
-    width: 100%;
-    margin: 3vh 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(40px, auto));
+    width: 270px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* margin: 3vh 0; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, minmax(40px, auto)); */
     word-wrap: break-word;
     /* FIXME: */
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(128, 128, 128, 0.1) ;
+    padding-left: 10px;
+    /* border-bottom: 1px solid rgb(128, 128, 128, 0.1) ; */
+    background-color: #fff;
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
-#Display-area .currentInput{
+/* #Display-area .currentInput{
     text-align: right;
     height: 8vh;
     color: #fff;
@@ -46,52 +59,59 @@ body{
     height: 7px;
     line-height: 3;
     font-size: larger;
-}
+} */
 .keypad-btns{
     display: grid;
     grid: repeat(5,70px) / repeat(4, 70px);
-    gap: 20px;
-    padding-top: 20px;
+    gap: px;
+    /* padding-top: 20px; */
 }
 .keypad-btns button{
     outline: none;
     border: none;
-    border-radius:122px;
+    /* border-radius:8px; */
     background-color: #C98474;
-    transition:all .4s;
+    transition:all .1s;
     color: #fff;
     font-size: x-large;
-    box-shadow: 1.5px 1.5px 2px #fff;
+    /* box-shadow: .5px .5px 2px #fff; */
 }
+
 
 
 .keypad-btns .fun-btn{
     color: #000;
-    background-color: #E79CA3;
-    font-weight: bold;
+    background-color: #374955;
+    
 }
 .keypad-btns .num-btn{
-    background-color: #EB2A5D;
+    background-color: #0C2735;
 }
 .num-btn:hover{
-    background-color: #997200;
-    box-shadow: 2px 2px 2px rgb(100, 74, 117) inset;
+    background-color: #00505F;
+    /* box-shadow: .5px .5px 2px #fff inset; */
     font-size: 25px;
+    transform: translateY(-2px);
 }
 .fun-btn:hover{
-    background-color: #F2D388;
-    box-shadow: 2px 2px 2px rgb(124, 56, 56) inset;
+    background-color: #677A87;
+    /* box-shadow: .5px .5px 2px #fff inset; */
     font-size: 25px;
+    transform: translateY(-2px);
 }
 @media only screen and (max-width: 600px){
-    body{
-        background-color: #131313;
-        align-items: flex-start;
-    }
+   
 }
 .red{
-    background-color: #ED2F20 !important;
+    background-color: #FC2D2D !important;
+    transition: .1s;
 }
 .red:hover{
     background-color: #008944 !important;
+}
+.yellow{
+    background-color: #FFA600 !important;
+}
+.yellow:hover{
+    background-color: #FF14C5 !important
 }
