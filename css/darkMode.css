@@ -1,0 +1,45 @@
+:root{
+    --light: #FFC4C4;
+    --dark: #23283b;
+    --purple: #9156E2;
+    --lightPurple: #9a64e4;
+    --pink: #E62F89;
+    --white: #F7F7F7;
+    --black: #212121;
+    --red: #FC2D2D;
+    --green: #008944;
+    --yellow: #FFA600;
+    --blue: #515465;
+    --lightBlue: #595E72;
+    --whiteHover: #CFD2CF;
+}
+*{
+    transition: .5s;
+}
+.dark-mode{
+    background-color: var(--black) ;
+}
+.dark-mode #Display-area{
+    background-color: var(--white);
+    color: #000;
+    /* transition: .5s; */
+}
+.dark-mode .keypad-btns  button{
+    color: var(--light);
+}
+.dark-mode .keypad-btns .fun-btn{
+    background-color: var(--blue);
+}
+.dark-mode .keypad-btns .num-btn{
+    background-color: var(--lightBlue);
+}
+.dark-mode .keypad-btns .num-btn:hover{
+    background-color: var(--blue);
+}
+.dark-mode #btn-equal, .dark-mode #btn-point{
+    background-color: var(--red);
+}
+.dark-mode main{
+    box-shadow: 5px 5px 10px black, 0px -5px 10px black;
+}
+

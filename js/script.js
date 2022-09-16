@@ -28,6 +28,42 @@ btnClearLastAction.addEventListener('click', (e)=>{
     display.textContent = '0';
 })
 
+btnBackSpace.addEventListener('click',(e)=>{
+    let len = display.textContent.length;
+    let lastDigit = display.textContent.substring(len-1 , len);
+    if(len > 1){
+        display.textContent = display.textContent.substring(0,len - 1);
+    }else{
+        display.textContent = '0';
+    }
+    if(lastDigit == '.'){
+        ifChosenPoint = false;
+    }
+})
+
+btnPn.addEventListener('click', (e)=>{
+    display.textContent = display.textContent * -1;
+})
+btnPoint.addEventListener('click', (e)=>{
+    if(ifChosenPoint == false){
+        display.textContent += '.';
+        ifChosenPoint = true;
+    }
+})
+
+btnNumbers.forEach((item)=>{
+    item.addEventListener('click', (e)=>{
+        if(display.textContent == "0"){
+            display.textContent = e.target.textContent;
+            
+        }
+       else{
+        display.textContent += e.target.textContent;
+       }
+        
+    })
+})
+
 btnPlus.addEventListener('click', (e)=>{
     number1 = Number(display.textContent);
     display.textContent = '0';
@@ -73,50 +109,4 @@ btnEqual.addEventListener('click', (e)=>{
     }
     display.textContent = result;
     setResult = true;
-})
-
-btnBackSpace.addEventListener('click',(e)=>{
-    let len = display.textContent.length;
-    let lastDigit = display.textContent.substring(len-1 , len);
-    if(len > 1){
-        display.textContent = display.textContent.substring(0,len - 1);
-    }else{
-        display.textContent = '0';
-    }
-    if(lastDigit == '.'){
-        ifChosenPoint = false;
-    }
-})
-
-btnPn.addEventListener('click', (e)=>{
-    display.textContent = display.textContent * -1;
-})
-btnPoint.addEventListener('click', (e)=>{
-    if(ifChosenPoint == false){
-        display.textContent += '.';
-        ifChosenPoint = true;
-    }
-})
-
-
-btnNumbers.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
-        // if(display.textContent == "0.0"){
-        //     display.textContent= '';
-        //     // console.log(display.textContent);
-        //     // display.textContent = e.target.textContent;
-        // }
-        // else{
-        //    display.textContent += e.target.textContent;
-        // }
-        // display.textContent = e.target.textContent;
-        if(display.textContent == "0"){
-            display.textContent = e.target.textContent;
-            
-        }
-       else{
-        display.textContent += e.target.textContent;
-       }
-        
-    })
 })

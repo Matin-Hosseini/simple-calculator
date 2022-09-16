@@ -3,19 +3,32 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* :root{
-    background-color: #C98474;
-} */
+:root{
+    --light: #FFC4C4;
+    --dark: #23283b;
+    --purple: #9156E2;
+    --lightPurple: #9a64e4;
+    --pink: #E62F89;
+    --white: #F7F7F7;
+    --black: #212121;
+    --red: #FC2D2D;
+    --green: #008944;
+    --yellow: #FFA600;
+    --blue: #374955;
+    --darkBlue: #0C2735;
+    --whiteHover: #CFD2CF;
+
+}
 body{
-    background-color: #23283b;
+    background-color: var(--light);
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    transition: .5s;
 }
 main{
-    background-color: #131313;
-    /* background-color: #A7D2CB; */
+    /* background-color: #131313; */
     width: 270px;
     height: auto;
     display: flex;
@@ -28,21 +41,17 @@ main{
     box-shadow: 7px 3px 15px #000000;
 }
 #Display-area{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 270px;
     height: 80px;
+    background-color: var(--black);
+    color: #fff;
     display: flex;
     align-items: center;
-    /* margin: 3vh 0; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, minmax(40px, auto)); */
     word-wrap: break-word;
     /* FIXME: */
     padding-left: 10px;
-    /* border-bottom: 1px solid rgb(128, 128, 128, 0.1) ; */
-    background-color: #fff;
     font-size: 25px;
-    color: #000000;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 /* #Display-area .currentInput{
@@ -63,47 +72,48 @@ main{
 .keypad-btns{
     display: grid;
     grid: repeat(5,70px) / repeat(4, 70px);
-    gap: px;
+    /* gap: 1px; */
     /* padding-top: 20px; */
 }
 .keypad-btns button{
     outline: none;
     border: none;
     /* border-radius:8px; */
-    background-color: #C98474;
+    /* background-color: #C98474; */
     transition:all .1s;
-    color: #fff;
-    font-size: x-large;
+    
+    font-size: 1.5rem;
     /* box-shadow: .5px .5px 2px #fff; */
 }
-
-
+.keypad-btns button:hover{
+    font-size: 1.7rem;
+}
 
 .keypad-btns .fun-btn{
     color: #000;
-    background-color: #374955;
+    background-color: var(--purple);
     
 }
 .keypad-btns .num-btn{
-    background-color: #0C2735;
+    background-color: var(--white);
+    color: #000;
 }
 .num-btn:hover{
-    background-color: #00505F;
+    background-color: var(--whiteHover);
     /* box-shadow: .5px .5px 2px #fff inset; */
-    font-size: 25px;
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
 }
 .fun-btn:hover{
-    background-color: #677A87;
+    background-color: var(--lightPurple);
     /* box-shadow: .5px .5px 2px #fff inset; */
-    font-size: 25px;
-    transform: translateY(-2px);
+    
+    /* transform: translateY(-2px); */
 }
 @media only screen and (max-width: 600px){
    
 }
-.red{
-    background-color: #FC2D2D !important;
+/* .red{
+    background-color: var(--red) !important;
     transition: .1s;
 }
 .red:hover{
@@ -114,4 +124,10 @@ main{
 }
 .yellow:hover{
     background-color: #FF14C5 !important
+} */
+
+#btn-equal, #btn-point{
+    background-color: var(--pink);
 }
+
+
