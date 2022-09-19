@@ -13,8 +13,20 @@
     --lightBlue: #595E72;
     --whiteHover: #CFD2CF;
 }
+
 *{
-    transition: .5s;
+    transition: ease-in .5s;
+}
+.dark-mode #dark-mode-btn{
+    border: 1px solid #fff;
+}
+.dark-mode #dark-mode-btn::before{
+    background-color: #fff;
+    left: 37px;
+}
+.dark-mode #btn-text{
+    color: #fff;
+    
 }
 .dark-mode{
     background-color: var(--black) ;
@@ -26,6 +38,7 @@
 }
 .dark-mode .keypad-btns  button{
     color: var(--light);
+    
 }
 .dark-mode .keypad-btns .fun-btn{
     background-color: var(--blue);
